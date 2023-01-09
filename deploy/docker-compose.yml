@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+
+    da_sys_nginx:
+        container_name: da_sys_nginx
+        image: 'sys_nginx:2.0'
+        restart: always
+        ports:
+          - '8004:80'
+        volumes:
+          - da_static:/static
+          - da_sys_volume:/da_sys_django
+          - /tmp/log_da_sys:/var/log/nginx
+          - ${PWD}/nginx/nginx.da_system.conf:/etc/nginx/sites-available/nginx.system.conf
+        depends_on:
+          - da_sys_django
+
+    da_sys_django:
+        container_name: da_sys_django
+        image: 'sys_django:2.0'
+        restart: always
+        environment:
+          - DJANGO_SETTINGS_MODULE=da_sys_django.settings.deploy_SIT
+        command:  bash -c '/venv/bin/python manage.py collectstatic --noinput &&
+                          /venv/bin/uwsgi --ini /uwsgi.ini'
+        volumes:
+          - da_static:/static
+          - da_sys_volume:/da_sys_django
+          - redis_conn:/redis_conn
+          - ${PWD}/uwsgi.ini:/uwsgi.ini
+          - /tmp/log_da_sys:/tmp/log
+        working_dir: /da_sys_django
+
+volumes:
+    da_sys_volume:
+      driver: local
+      driver_opts:
+        o: bind
+        type: none
+        device: ${HOME}/dev/da_system/da_sys_django
+    da_static:
+    redis_conn:
+      external: true

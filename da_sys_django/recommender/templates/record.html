@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+{% extends "base.html" %}
+
+
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/record.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="record-right">
+
+  <div>
+    <script type="text/javascript">
+      const setupLogs = {{ new10RecommendLogs | safe }};
+      // [[start_time, end_time, timezone, currency, owner_names, game_names, game_codes, create_time, creator], []...]
+      console.log('setupLogs', setupLogs)
+    </script>
+    <script type="text/javascript" src="{% static 'js/record.js' %}"></script>
+
+  </div>
+
+<div class="show-text-box">
+
+  <div class="text-box">
+    *&ensp;只顯示最近10筆
+  </div>
+    <div class="pageBox" id="page_id">
+      <div class="change-page-btn" onclick="changePage(-1)"><<</div>
+      <input  type="text" id= "current_page" class="current-page-box" onchange="getRecordsAPI(this.value)" value=1 >
+      <div>/</div>
+      <div id="total_page">1</div>
+      <div class="change-page-btn" onclick="changePage(1)">>></div>
+    </div>
+    </div>
+  <div class="show-box" id="show-box"></div>
+</div>
+{% endblock %}
+
+
+</html>

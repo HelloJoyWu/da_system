@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  {% block title %}
+  <title>推薦遊戲</title>
+  {% endblock %}
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" />
+  {% block css %}{% endblock %}
+  <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+</head>
+  <script type="text/javascript" src="{% static 'js/project_rlz.js' %}"></script>
+
+<body>
+  {% if user.is_authenticated %}
+
+  <div class="left-menu-box">
+    <div class="top-msg">
+      <img src="{% static "img/player.png" %}">
+      {% if user.is_authenticated %}
+      <div class="player-text">
+        Hi {{ user.username }}!
+      </div>
+      {% else %}
+      <h3>Please logged in</h3>
+      {% endif %}
+      <div class="topnav">
+          <a href="{% url 'logout' %}">登出</a>
+      </div>
+    </div>
+
+    <div class="label-box">
+      <div class="add"><a href="/recommender">新增推薦</a></div>
+      <div class="check"><a href="/recommender/record">查看推薦</a></div>
+    </div>
+  </div>
+  <div class="text-img">
+    <img src="{% static "img/text.png" %}" class="text">
+  </div>
+  {% endif %}
+
+  {% csrf_token %}
+	<script>
+		const CSRFtoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+	</script>
+
+  {% block content %}{% endblock %}
+
+</body>
+</html>

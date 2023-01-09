@@ -1,0 +1,379 @@
+.label-box div.add {
+  background-color: white;
+  color: #E0840E;
+  background-image: url('res/add_2.png');
+}
+
+.label-box div.add a {
+  color: #E0840E;
+}
+
+.left-block {
+  width: 38%;
+  height: 80%;
+  float: left;
+  margin-top: 7%;
+}
+
+.right-block {
+  float: left;
+  width: 45%;
+  height: 80%;
+  margin-top: 7%;
+}
+
+.time-box {
+  background: white;
+  background-image: url('res/arrow.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 80%;
+  height: 62%;
+  box-shadow: 0px 1px 12px #00000029;
+  border-radius: 31px;
+  margin: 0 auto;
+}
+
+.time-zone-box {
+  width: 80%;
+  height: 50%;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.write-box {
+  width: 99%;
+  height: 96%;
+  background: white;
+  box-shadow: 0px 1px 12px #00000029;
+  border-radius: 31px;
+  margin: 0 auto;
+}
+
+.time-box div.date-box {
+  width: 100%;
+  min-height: 80%;
+  display: inline-flex;
+  padding: 5% 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.time-box div.select-date-box {
+  width: 90%;
+  height: 10%;
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: #E0840E;
+  color: #E0840E;
+  margin: 0% auto;
+  background-image: url('res/date.png');
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.time-box font.date-text {
+  color: #E0840E;
+  margin-left: 5%;
+}
+
+.time-box div.select-date-box input[type="text"] {
+  width: 100%;
+  height: auto;
+  border: none;
+  font-size: 2.5rem;
+  color: #9E9E9E;
+  margin: 0 2% 0 2%;
+  background: none;
+  text-align: center;
+  line-height: 110%;
+}
+
+.time-box div.select-date-box button {
+  border-style: none;
+  background: none;
+  cursor: pointer;
+}
+
+.header-divider {
+  border-left: 1px solid #38546d;
+  background: #16222c;
+  width: 1px;
+  height: 80px;
+  position: absolute;
+  right: 250px;
+  top: 10px;
+}
+
+.time-zone-box input[type="radio"] {
+  display: none;
+}
+
+.time-zone-box label {
+  display: inline-block;
+  background-color: #898989;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 30px;
+  text-align: center;
+  line-height: 74px;
+  cursor: pointer;
+  border-radius: 36px;
+  width: 100%;
+  margin: 2% 0;
+  color: white;
+}
+
+.time-zone-box input[type="radio"]:checked+label {
+  background-color: #E0840E;
+  box-shadow: 0px 3px 6px #00000054;
+}
+
+.currency-box {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* .currency-box div.currency-radio-box {
+  margin: 2% 0 1% 0;
+
+} */
+
+/* .currency-box input[type="radio"] {
+  display: none;
+}
+
+.currency-box label {
+  display: inline-block;
+  background-color: #898989;
+  padding: 4px 11px;
+  font-family: Arial;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  border-radius: 36px;
+  width: 17%;
+  margin: 0 1%;
+}
+
+.currency-box input[type="radio"]:checked+label {
+  background-color: #E0840E;
+  box-shadow: 0px 3px 6px #00000054;
+} */
+
+.agent-box {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+}
+
+.agent-box div.agent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 1% 0 3% 10%;
+}
+
+.agent-box div.agent div.select-title {
+  color: gray;
+  width: 20%;
+  font-size: 30px;
+  line-height: 200%;
+  text-align: center;
+  font: normal normal bold 35px/47px Microsoft JhengHei;
+}
+
+.agent-box div.agent div.select-box {
+  width: 50%;
+}
+
+.game-code-text-box {
+  width: 100%;
+  height: auto;
+}
+
+.text-box {
+  width: 20%;
+  display: inline-block;
+  margin: 10px 19px auto
+}
+
+.text-box p {
+  width: 164px;
+}
+
+.game-code-text-box div.text-box input[type="text"] {
+  width: 164px;
+  height: 51px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  color: gray;
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: #E0840E;
+  background-repeat: no-repeat;
+  background-position: inherit;
+}
+
+.text-box p.name-text {
+  height: 10%;
+  margin: 1% auto;
+  font-size: 1em;
+  color: #E0840E;
+  line-height: 100%;
+}
+
+.title-box {
+  color: gray;
+  width: auto;
+  height: 10%;
+  text-align: center;
+  font: normal normal bold 2em/1.5em Microsoft JhengHei;
+  margin: 1% auto;
+}
+
+.remark-box {
+  margin-left: 3%;
+  color: #7A7A7A;
+  width: auto;
+  font: normal normal bold 0.8em/1em Microsoft JhengHei;
+}
+
+.send-button {
+  position: inherit;
+  width: 18%;
+  height: 8%;
+  border-style: none;
+  background: #E0840E 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 12px #00000029;
+  border-radius: 0.5em;
+  float: right;
+  color: white;
+  font-size: 1.3em;
+}
+
+.all-picture {
+  display: none;
+  backdrop-filter: blur(5px) brightness(70%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.all-picture font.send-text {
+  color: white;
+  font-size: 3em;
+  font-weight: bolder;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+}
+
+.confirm-box {
+  display: none;
+  width: 40%;
+  height: auto;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  margin-top: -15%;
+  margin-left: -15%;
+  background: white;
+  padding: 1% 2%;
+  font: normal normal bold 1em/1em Microsoft JhengHei;
+}
+
+.confirm-box table.confirm-box-table {
+  margin: 0 auto;
+  width: 100%;
+  height: 80%;
+  line-height: 1.5rem;
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+
+.confirm-box table.confirm-box-table td {
+  padding: 0 2%;
+}
+
+.confirm-box table.confirm-box-table td.time-td {
+  border-bottom: 2px solid #FC7A00;
+}
+
+.confirm-box table.confirm-box-table td.name-td {
+  border-left: 2px solid #FC7A00;
+}
+
+.confirm-box font.confirm-title {
+  margin-right: 0.5em;
+  color: #E0840E;
+  white-space: nowrap;
+  white-space: nowrap;
+}
+
+.confirm-box font.confirm-text {
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #A8A8A8;
+}
+.confirm-box font.confirm-text ol {
+  display:list-item;
+  text-indent: -1rem;
+}
+
+.confirm-button {
+  border-style: none;
+  position: absolute;
+  right: 1%;
+  bottom: 1%;
+  width: 12%;
+  height: 12%;
+  background: #E0840E;
+  color: white;
+  font-size: 1.2em;
+}
+
+@media (min-width: 1401px) {
+  .left-block {
+    margin-left: 14.5%;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 950px) {
+  .right-block {
+    margin-left: 26%;
+    width: 75%;
+    height: auto;
+  }
+
+  .left-block {
+    margin-left: 26%;
+    width: 70%;
+    height: 100%;
+  }
+  body{
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 949px) {
+  .right-block {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .left-block {
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body{
+    overflow-y: auto;
+  }
+}

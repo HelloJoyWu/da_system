@@ -30,8 +30,10 @@
 /tags
 
 /build
+**/build
 
 /dist
+**/dist
 
 /__pycache__
 **__pycache__
@@ -48,8 +50,3 @@ pyvenv*
 
 *.DS_store
 
-static
-uwsgi.ini
-*.sock
-
-*.pid

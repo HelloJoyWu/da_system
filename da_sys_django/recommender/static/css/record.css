@@ -1,0 +1,180 @@
+.label-box div.check {
+  background-color: white;
+  color: #E0840E;
+  background-image: url('res/check_2.png');
+}
+
+.label-box div.check a {
+  color: #E0840E;
+}
+
+.record-right {
+  margin-left: 14.5%;
+  width: 85.5%;
+  height: 92%;
+  margin-top: 7%;
+}
+
+.show-box {
+  width: 100%;
+  height: 85%;
+  overflow-y: auto;
+}
+
+.show-box div.record-box {
+  width: 70%;
+  height: 6%;
+  margin: 1% 0% 1% 5%;
+  padding: 0 1%;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 12px #00000029;
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.show-box div.record-box div.date-box {
+  float: left;
+  width: 93%;
+  font: normal normal bold 1rem/2rem Microsoft JhengHei;
+  margin-top: 0.7%;
+  color: #4E4E4E;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.show-box div.record-box div.date-box .textBox01 {
+  /* margin-right: 2%; */
+  width: 25%;
+}
+
+.show-box div.record-box div.date-box .textBox02 {
+  /* margin-right: 2%; */
+  width: 39%;
+}
+
+.show-box div.record-box div.date-box .textBox03 {
+  /* margin-right: 2%; */
+  width: 12%;
+}
+
+.show-box div.record-box div.more-box {
+  float: left;
+  width: 100%;
+  height: 100%;
+  font: normal normal bold 1rem/2rem Microsoft JhengHei;
+  margin-top: 0.7%;
+  border-top: 3px solid #DE7E0C;
+  color: #4E4E4E;
+}
+
+.show-box div.record-box div.more-box div.more-data-box-ttl {
+  width: 33%;
+  float: left;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-box div.record-box div.more-box div.more-data-box-ttr {
+  width: 67%;
+  float: left;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-box div.record-box div.more-box div div {
+  float: left;
+  width: 100%;
+  display: table-column-group;
+  overflow-y: auto;
+}
+
+.show-box div.record-box div.more-box div div ul {
+  margin-top: 0%;
+}
+
+.show-box div.record-box div.more-box div div li {
+  float: left;
+  width: 44%;
+  display: list-item;
+}
+
+.show-box div.record-box div.more-box div div.gmaeCode-text li {
+  text-indent: 0.5rem; 
+}
+
+.show-box div.record-box div.more-box div div.owner-text li {
+  list-style-type: disc;
+}
+
+.show-box div.record-box div.but-box {
+  width: 100%;
+  position: absolute;
+  right: 1%;
+  top: 5%;
+  text-align: right;
+}
+
+.record-box button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: right;
+  width: 100%;
+}
+
+.record-box button.close-but {
+  display: none;
+  width: 100%;
+}
+
+.show-text-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-box {
+  margin-left: 2%;
+}
+
+.pageBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 23%;
+}
+
+.pageBox div {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 1.2rem;
+  align-items: center;
+  display: flex;
+}
+
+.change-page-btn {
+  border-radius: 3px;
+  border-width: 10px;
+  background-color: #BEBEBE;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.current-page-box {
+  width: 20px;
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+@media (max-width: 1400px) {
+  .show-box div.record-box div.more-box div.more-data-box {
+    height: 60%;
+  }
+}
